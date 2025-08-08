@@ -1,0 +1,149 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #f48a00, #1760e7);
+}
+
+.calculator-container {
+  background-color: #f5f5f5;
+  border: 1px solid #c8c8c8;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  padding: 14px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.display {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 80px;
+  border-radius: 10px;  
+  color: rgb(0, 204, 255);  
+  padding-top: 0.45em; 
+  padding-bottom: 0.45em; 
+  font-size: 2.5em;
+  font-weight: bolder;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: right;
+}
+
+.display::-webkit-scrollbar {
+  display: none; 
+}
+
+
+.display-container {
+  background-color: rgb(4, 42, 65);
+  border-radius: 10px;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+}
+
+.buttons {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.buttons button {
+  aspect-ratio: 1/1;
+  width: 100%;
+  background-color: #e0e0e0;
+  border: 1px solid #c8c8c8;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  transition: background-color 0.2s;
+}
+
+/* Hover styles */
+.buttons button:hover {
+  background-color: #d2d2d2;
+}
+
+#ac, #ce {
+  background-color: #b71c1c;
+  color: white;
+}
+
+#ac:hover, #ce:hover {
+  background-color: #ca2e2e;
+}
+
+#opening-bracket, #closing-bracket {
+  background-color: #424242;
+  color: white;
+}
+
+#opening-bracket:hover, #closing-bracket:hover {
+  background-color: #525252;
+}
+
+#plus, #minus, #div, #mul {
+  background-color: #f48a00;
+  color: white;
+}
+
+#plus:hover, #minus:hover, #div:hover, #mul:hover {
+  background-color: #ff9914;
+}
+
+#equals {
+  background-color: #007bff;
+  color: white;
+}
+
+#equals:hover {
+  background-color: #1f8afd;
+}
+
+#m-plus, #m-minus, #mr, #mc {
+  background-color: #2c3e50;
+  color: white;
+}
+
+#m-plus:hover, #m-minus:hover, #mr:hover, #mc:hover {
+  background-color: #3c536b;
+}
+
+#dot {
+  background-color: rgb(4, 42, 65);
+  color: white;
+}
+
+#dot:hover {
+  background-color: rgb(9, 66, 102);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .buttons button {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calculator-container {
+    max-width: 95%;
+    padding: 10px;
+  }
+
+  .buttons {
+    gap: 10px;
+  }
+
+  .buttons button {
+    font-size: 1.2rem;
+  }
+}
